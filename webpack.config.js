@@ -10,9 +10,17 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
         loader: 'babel',
         exclude: [/node_modules/]
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc'
   }
 }

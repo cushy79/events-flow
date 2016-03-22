@@ -71,7 +71,7 @@ module.exports =
 	var notifier = new _notifier2.default(message);
 	notifier.includeNotifications();
 	notifier.notify(function (result) {
-	  console.log("Done");
+	  console.log(result);
 	});
 
 /***/ },

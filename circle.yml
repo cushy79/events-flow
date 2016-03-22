@@ -1,0 +1,18 @@
+machine:
+  node:
+    version: 0.10.36
+  environment:
+    AWS_REGION: ap-northeast-1
+
+dependencies:
+  pre:
+    - curl -sL https://github.com/apex/apex/releases/download/v0.7.2/apex_linux_amd64 -o ~/apex
+    - chmod +x ~/apex
+  override:
+    - npm install
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - ~/apex deploy

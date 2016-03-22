@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-  "dependencies": {
-    "webpack": "^1.12.14"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
@@ -17,11 +15,20 @@
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-runtime": "^6.6.1",
-    "jmespath": "^0.14.1"
+    "eslint": "^2.4.0",
+    "eslint-loader": "^1.3.0",
+    "espower-babel": "^4.0.1",
+    "jmespath": "^0.14.1",
+    "mocha": "^2.4.5",
+    "power-assert": "^1.3.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node_modules/.bin/webpack",
+    "test": "node_modules/.bin/mocha --compilers js:espower-babel/guess test/**/*.js"
+  },
+  "directories": {
+    "test": "test/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }

@@ -14,5 +14,5 @@ const message = {
 let notifier = new Notifier(message)
 notifier.includeNotifications();
 notifier.notify(result => {
-  console.log("Done");
+  console.log(result);
 });
